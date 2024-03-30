@@ -40,3 +40,67 @@
   background-color: lightcoral;
   color: rgb(104, 1, 1);
 }
+
+/*Styling for the navidation bar goes below*/
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: #001233;
+  position: sticky;
+  color: #fe5000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  line-height: 15px;
+  font-weight: 900;
+  font-size: 20px;
+  margin-left: 25px;
+}
+
+.menu-selection > ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 10px;
+  color: #fe5000;
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  color: #efe0ca;
+}
+
+.checkout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25px;
+}
+.checkout-link {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: #efe0ca;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px;
+}
+
+.checkout-link:hover {
+  color: #fe5000;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
