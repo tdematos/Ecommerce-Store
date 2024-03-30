@@ -111,3 +111,61 @@
   margin-right: 10px;
   font-size: 18px;
 }
+/*Styling for hero section goes below */
+.hero {
+  width: 100vw;
+  height: 55vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.hero-cta {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  background-color: var(--darkBlue-color);
+  color: var(--orange-color);
+  padding-right: 50px;
+}
+
+.hero-text {
+  margin-left: 70px;
+}
+
+.hero-text > h2 {
+  font-weight: 900;
+  font-size: 55px;
+  line-height: 60px;
+}
+.hero-text > p {
+  color: var(--sand-color);
+  font-size: 15px;
+  line-height: 35px;
+}
+.hero-subtext {
+  font-weight: 700;
+}
+
+.hero-img {
+  width: 50%;
+  background-color: var(--sand-color);
+}
+
+.cta-button {
+  background-color: var(--orange-color);
+  font-weight: 700;
+  font-size: 20px;
+  border: none;
+  width: 250px;
+  height: 60px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  transition: background-color 0.75s;
+}
+
+.cta-button:hover {
+  cursor: pointer;
+  background-color: var(--sand-color);
+}
