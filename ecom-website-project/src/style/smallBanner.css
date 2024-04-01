@@ -1,0 +1,11 @@
+.small-banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--sand-color);
+  height: 40px;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px;
+}

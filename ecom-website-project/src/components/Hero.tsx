@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
             <p className="hero-subtext">NEW MEMBERS GET ADDITIONAL DISCOUNT</p>
             <p>all you need is here at WON STOP SHOP.</p>
             <button className="cta-button">START SHOPPING</button>
-            <p>FREE SHIPPING</p>
+            <p className="hero-subtext">FREE SHIPPING</p>
           </div>
         </div>
         <div className="hero-img"></div>

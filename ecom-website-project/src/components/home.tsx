@@ -2,6 +2,9 @@ import React, { Fragment } from "react";
 import Banner from "./Banner";
 import NavBar from "./Navigation";
 import HeroSection from "./Hero";
+import SmallBanner from "./SmallBanner";
+import ItemCarousal from "./ItemCarousal";
+import ItemCompare from "./ItemCompare";
 
 const HomePage: React.FC = () => {
   return (
@@ -9,8 +12,9 @@ const HomePage: React.FC = () => {
       <Banner />
       <NavBar />
       <HeroSection />
-      <section className="item-carousal"></section>
-      <section className="item-compare"></section>
+      <SmallBanner />
+      <ItemCarousal />
+      <ItemCompare />
       <section className="two-items"></section>
       <section className="customer-testimonials"></section>
       <section className="cta"></section>
