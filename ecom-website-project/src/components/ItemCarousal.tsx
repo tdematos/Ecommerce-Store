@@ -19,7 +19,6 @@ const ItemCarousal: React.FC = () => {
             <ItemCard />
             <ItemCard />
             <ItemCard />
-
             <div className="right-select">
               <p>&gt;</p>
             </div>
