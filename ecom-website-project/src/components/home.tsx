@@ -5,6 +5,7 @@ import HeroSection from "./Hero";
 import SmallBanner from "./SmallBanner";
 import ItemCarousal from "./ItemCarousal";
 import ItemCompare from "./ItemCompare";
+import TwoItems from "./twoItems";
 
 const HomePage: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const HomePage: React.FC = () => {
       <SmallBanner />
       <ItemCarousal />
       <ItemCompare />
-      <section className="two-items"></section>
+      <TwoItems />
       <section className="customer-testimonials"></section>
       <section className="cta"></section>
       <section className="item-carousal"></section>

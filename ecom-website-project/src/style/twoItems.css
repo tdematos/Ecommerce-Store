@@ -1,0 +1,8 @@
+.two-items {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--darkBlue-color);
+}

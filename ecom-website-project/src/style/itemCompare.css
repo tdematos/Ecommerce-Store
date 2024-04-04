@@ -108,7 +108,7 @@ hr {
 li {
   font-size: 20px;
   list-style-type: none;
-  color: rgb(45, 151, 45);
+  color: rgb(1, 88, 1);
 }
 
 .benefit-checklist > li::before {
