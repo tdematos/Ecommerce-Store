@@ -1,6 +1,6 @@
 .compare-section {
   background-color: var(--lightsand-color);
-  height: 120vh;
+  height: 180vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -111,6 +111,6 @@ li {
   color: rgb(45, 151, 45);
 }
 
-li::before {
+.benefit-checklist > li::before {
   content: "✔️ ";
 }

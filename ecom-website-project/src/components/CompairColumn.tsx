@@ -4,7 +4,7 @@ import "../style/itemCompare.css";
 const CompareColumn: React.FC = () => {
   return (
     <div className="compare-column">
-      <ul>
+      <ul className="benefit-checklist">
         <li>Fast</li>
         <li>Light</li>
         <li>Stable</li>
