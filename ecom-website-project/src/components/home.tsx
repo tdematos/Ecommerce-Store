@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
       <TwoItems />
       <section className="customer-testimonials"></section>
       <section className="cta"></section>
-      <section className="item-carousal"></section>
+      <ItemCarousal />
       <footer></footer>
     </Fragment>
   );

@@ -88,9 +88,14 @@ h3 {
 .round-selector {
   width: 10px;
   height: 10px;
-  background-color: var(--darkBlue-color);
+  background-color: var(--sand-color);
   margin: 3px;
   border-radius: 5px;
+}
+
+.round-selector:hover {
+  background-color: var(--darkBlue-color);
+  cursor: pointer;
 }
 
 .right-select,

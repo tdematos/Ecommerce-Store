@@ -1,8 +1,55 @@
 .two-items {
-  height: 80vh;
+  height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--darkBlue-color);
+}
+
+.item-one {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item-round-pic1 {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  border-radius: 100px;
+  margin: 40px;
+}
+
+.item-headline {
+  color: var(--sand-color);
+  font-weight: 800;
+  font-size: 35px;
+}
+
+.item-cta2 {
+  height: 60px;
+  width: 250px;
+  background-color: var(--orange-color);
+  border: none;
+  color: var(--darkBlue-color);
+  font-weight: 600;
+  font-size: 30px;
+  margin-top: 15px;
+  transition: background-color 0.75s;
+}
+
+.item-cta2:hover {
+  background-color: var(--sand-color);
+  cursor: pointer;
+}
+
+.item-round-pic2 {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(41, 159, 209);
+  border-radius: 100px;
 }
