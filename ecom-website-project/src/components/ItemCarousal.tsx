@@ -1,5 +1,6 @@
 import React, { Fragment } from "react/jsx-runtime";
 import "../style/itemCarousal.css";
+import ItemCard from "./ItemCard";
 
 const ItemCarousal: React.FC = () => {
   return (
@@ -14,41 +15,10 @@ const ItemCarousal: React.FC = () => {
             <p>&lt;</p>
           </div>
           <div className="item-box">
-            <div className="item-card">
-              <div className="item-img"></div>
-              <div className="item-info">
-                <p className="item-title">Extreme Golf Club</p>
-                <p className="item-description">Carbon fiber driver</p>
-                <p className="item-price">$75.99</p>
-              </div>
-            </div>
-
-            <div className="item-card">
-              <div className="item-img"></div>
-              <div className="item-info">
-                <p className="item-title">Extreme Golf Club</p>
-                <p className="item-description">Carbon fiber driver</p>
-                <p className="item-price">$75.99</p>
-              </div>
-            </div>
-
-            <div className="item-card">
-              <div className="item-img"></div>
-              <div className="item-info">
-                <p className="item-title">Extreme Golf Club</p>
-                <p className="item-description">Carbon fiber driver</p>
-                <p className="item-price">$75.99</p>
-              </div>
-            </div>
-
-            <div className="item-card">
-              <div className="item-img"></div>
-              <div className="item-info">
-                <p className="item-title">Extreme Golf Club</p>
-                <p className="item-description">Carbon fiber driver</p>
-                <p className="item-price">$75.99</p>
-              </div>
-            </div>
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
 
             <div className="right-select">
               <p>&gt;</p>

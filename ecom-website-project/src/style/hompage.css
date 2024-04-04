@@ -115,7 +115,7 @@
 /*Styling for hero section goes below */
 .hero {
   width: 100vw;
-  height: 55vh;
+  height: 60vh;
   display: flex;
   flex-direction: row;
 }

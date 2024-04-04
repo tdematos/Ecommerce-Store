@@ -17,7 +17,8 @@
 
 h3 {
   font-weight: 900;
-  font-size: 30px;
+  font-size: 35px;
+  margin-left: 15px;
 }
 
 .item-menu-access {
@@ -45,14 +46,21 @@ h3 {
   color: var(--sand-color);
   border: none;
   font-weight: 600;
+  margin-right: 60px;
+  transition: background-color 0.75s;
+}
+
+.item-menu-btn:hover {
+  cursor: pointer;
+  background-color: var(--orange-color);
+  color: var(--darkBlue-color);
 }
 
 .item-card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 15px;
-  margin-top: 40px;
+  margin: 10px 15px 15px 15px;
   width: 275px;
   height: 350px;
 }
@@ -104,11 +112,11 @@ h3 {
 
 .left-select {
   position: relative;
-  top: 200px;
+  top: 170px;
 }
 
 .right-select {
   position: relative;
-  top: 135px;
+  top: 105px;
   right: 40px;
 }
