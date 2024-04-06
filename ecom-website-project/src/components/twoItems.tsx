@@ -12,7 +12,16 @@ const TwoItems: React.FC = () => {
             <button className="item-cta2">GET ITEM NOW</button>
           </div>
         </div>
-        <div className="item-two"></div>
+        <div className="item-two">
+          <div className="item-round-pic2"></div>
+          <div className="item-text">
+            <button className="item-cta2">GET ITEM NOW</button>
+            <p className="item-headline-two">
+              FOR A LIMITED TIME GET 50% OFF YOUR PURCHASE WHEN YOU SPEND OVER
+              $30...
+            </p>
+          </div>
+        </div>
       </section>
     </Fragment>
   );
