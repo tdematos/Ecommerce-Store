@@ -6,6 +6,7 @@ import SmallBanner from "./SmallBanner";
 import ItemCarousal from "./ItemCarousal";
 import ItemCompare from "./ItemCompare";
 import TwoItems from "./twoItems";
+import TestimonialBanner from "./TestimonialBanner";
 
 const HomePage: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ const HomePage: React.FC = () => {
       <ItemCarousal />
       <ItemCompare />
       <TwoItems />
-      <section className="customer-testimonials"></section>
+      <TestimonialBanner />
       <section className="cta"></section>
       <ItemCarousal />
       <footer></footer>
