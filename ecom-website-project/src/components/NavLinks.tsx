@@ -1,5 +1,6 @@
 import React from "react";
 import "../style/hompage.css";
+import { Link } from "../../node_modules/react-router-dom/dist/index";
 
 interface NavLinksProps {
   aboutme: string;
@@ -11,14 +12,14 @@ const NavLinks: React.FC<NavLinksProps> = (props) => {
     <div className="menu-selection">
       <ul>
         <li>
-          <a href="" className="nav-link">
+          <Link to="about" className="nav-link">
             {props.aboutme}
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="" className="nav-link">
+          <Link to="shop" className="nav-link">
             {props.shop}
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
