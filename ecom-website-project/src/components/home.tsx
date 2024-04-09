@@ -8,6 +8,7 @@ import ItemCompare from "./ItemCompare";
 import TwoItems from "./twoItems";
 import TestimonialBanner from "./TestimonialBanner";
 import CTASection from "./CTASection";
+import Footer from "./Footer";
 
 const HomePage: React.FC = () => {
   return (
@@ -22,7 +23,7 @@ const HomePage: React.FC = () => {
       <TestimonialBanner />
       <CTASection />
       <ItemCarousal />
-      <footer></footer>
+      <Footer />
     </Fragment>
   );
 };
