@@ -2,6 +2,9 @@ import React, { Fragment } from "react";
 import "../style/Footer.css";
 
 const Footer: React.FC = () => {
+  let currentDate: Date = new Date();
+  let currentYear: number = currentDate.getFullYear();
+
   return (
     <Fragment>
       <footer>
@@ -26,7 +29,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="social-media-links"></div>
         <div className="copyright-links">
-          <p>© 2024, Won Stop Shop. All Rights Reserved.</p>
+          <p>{`© ${currentYear}, Won Stop Shop. All Rights Reserved.`}</p>
         </div>
       </footer>
     </Fragment>

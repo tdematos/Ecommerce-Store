@@ -7,6 +7,10 @@ footer {
   align-items: space-between;
 }
 
+.site-links-container {
+  margin-top: 40px;
+}
+
 .link-list > li > a {
   text-decoration: none;
   color: var(--sand-color);
