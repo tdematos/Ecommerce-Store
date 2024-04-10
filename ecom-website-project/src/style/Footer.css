@@ -19,10 +19,18 @@ footer {
   line-height: 40px;
 }
 
+.link-list > li > a:hover {
+  color: var(--orange-color);
+}
+
 .copyright-links {
   text-decoration: none;
   color: var(--sand-color);
   font-size: 15px;
   line-height: 40px;
   margin-left: 40px;
+}
+
+.copyright-links {
+  margin-bottom: 15px;
 }
