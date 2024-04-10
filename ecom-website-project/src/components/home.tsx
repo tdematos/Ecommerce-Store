@@ -9,12 +9,14 @@ import TwoItems from "./twoItems";
 import TestimonialBanner from "./TestimonialBanner";
 import CTASection from "./CTASection";
 import Footer from "./Footer";
+import NavSelector from "./NavSelector";
 
 const HomePage: React.FC = () => {
   return (
     <Fragment>
       <Banner />
       <NavBar />
+      <NavSelector />
       <HeroSection />
       <SmallBanner />
       <ItemCarousal />
