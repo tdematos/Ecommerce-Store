@@ -1,12 +1,28 @@
 import { Fragment } from "react";
 import "../style/nav-selector.css";
 
-const NavSelector: React.FC = () => {
+interface navSelectorProps {
+  navTitle: string;
+  caption: string;
+  isDialogOpen: boolean;
+  onMouseLeave: (event: React.MouseEvent<HTMLDivElement>) => void;
+}
+
+const NavSelector: React.FC<navSelectorProps> = ({
+  navTitle,
+  caption,
+  isDialogOpen,
+  onMouseLeave,
+}) => {
   return (
     <Fragment>
-      <dialog className="nav-modal" open>
+      <dialog
+        className="nav-modal"
+        open={isDialogOpen}
+        onMouseLeave={onMouseLeave}
+      >
         <div className="modal-links">
-          <h3 className="modal-title">INVENTORY</h3>
+          <h3 className="modal-title">{navTitle}</h3>
           <ul className="modal-link-list">
             <li>
               <a href="">Clubs</a>
@@ -18,7 +34,7 @@ const NavSelector: React.FC = () => {
         </div>
         <div className="modal-photo">
           <div className="photo-box"></div>
-          <p className="photo-caption">Not sure where to start?</p>
+          <p className="photo-caption">{caption}</p>
         </div>
       </dialog>
     </Fragment>

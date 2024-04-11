@@ -4,12 +4,22 @@ import { IoPerson } from "react-icons/io5";
 import NavLinks from "./NavLinks";
 import Link from "react";
 
-const NavBar = () => {
+interface navLinks {
+  about: string;
+  shop: string;
+  onMouseOver: (event: React.MouseEvent<HTMLDivElement>) => void;
+}
+
+const NavBar: React.FC<navLinks> = (props) => {
   return (
     <>
       <nav className="navbar">
         <h2 className="logo">WON STOP SHOP</h2>
-        <NavLinks aboutme="ABOUT" shop="SHOP" />
+        <NavLinks
+          aboutme={props.about}
+          shop={props.shop}
+          onMouseOver={props.onMouseOver}
+        />
         <div className="checkout">
           <a href="" className="checkout-link">
             <IoPerson className="icon" />
