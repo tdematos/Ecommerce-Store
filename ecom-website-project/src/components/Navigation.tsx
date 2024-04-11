@@ -2,7 +2,6 @@ import "../style/hompage.css";
 import { FaCartShopping } from "react-icons/fa6";
 import { IoPerson } from "react-icons/io5";
 import NavLinks from "./NavLinks";
-import Link from "react";
 
 interface navLinks {
   about: string;
