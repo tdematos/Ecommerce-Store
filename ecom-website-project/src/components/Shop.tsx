@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import ShopBanner from "./shop components/ShopBanner";
 import CategorySelector from "./shop components/CategorySelector";
 import ShopText from "./shop components/ShopText";
+import ItemContainer from "./shop components/ItemContainer";
 
 const Shop: React.FC = () => {
   const [toggleModal, setToggleModal] = useState<boolean>(false);
@@ -28,6 +29,7 @@ const Shop: React.FC = () => {
       />
       <ShopBanner />
       <CategorySelector />
+      <ItemContainer />
       <ShopText />
       <Footer />
     </Fragment>
