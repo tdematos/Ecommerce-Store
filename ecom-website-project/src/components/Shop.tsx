@@ -3,6 +3,7 @@ import NavBar from "./Navigation";
 import NavSelector from "./NavSelector";
 import Footer from "./Footer";
 import ShopBanner from "./shop components/ShopBanner";
+import CategorySelector from "./shop components/CategorySelector";
 
 const Shop: React.FC = () => {
   const [toggleModal, setToggleModal] = useState<boolean>(false);
@@ -25,6 +26,7 @@ const Shop: React.FC = () => {
         onMouseLeave={handleMouseOut}
       />
       <ShopBanner />
+      <CategorySelector />
       <Footer />
       <h1>Shop</h1>
     </Fragment>

@@ -12,3 +12,31 @@
   font-size: 45px;
   margin-left: 60px;
 }
+
+.category-container {
+  border-bottom: solid 1px lightgray;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-list > li {
+  margin: 0px 15px 0px 15px;
+  color: var(--darkBlue-color);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.category-list > li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
