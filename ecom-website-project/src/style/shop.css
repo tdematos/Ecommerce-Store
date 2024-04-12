@@ -40,3 +40,34 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+.shoptext-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.shoptext-innerbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.shoptext-innerbox > h3 {
+  color: var(--darkBlue-color);
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 50px;
+  margin-left: 0px;
+}
+
+.shoptext-innerbox > p {
+  color: var(--darkBlue-color);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 50px;
+  margin-top: 10px;
+}

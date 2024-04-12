@@ -4,6 +4,7 @@ import NavSelector from "./NavSelector";
 import Footer from "./Footer";
 import ShopBanner from "./shop components/ShopBanner";
 import CategorySelector from "./shop components/CategorySelector";
+import ShopText from "./shop components/ShopText";
 
 const Shop: React.FC = () => {
   const [toggleModal, setToggleModal] = useState<boolean>(false);
@@ -27,8 +28,8 @@ const Shop: React.FC = () => {
       />
       <ShopBanner />
       <CategorySelector />
+      <ShopText />
       <Footer />
-      <h1>Shop</h1>
     </Fragment>
   );
 };
