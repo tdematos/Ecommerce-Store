@@ -1,0 +1,14 @@
+.banner-container {
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--sand-color);
+}
+
+.banner-title {
+  color: var(--darkBlue-color);
+  font-size: 45px;
+  margin-left: 60px;
+}

@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import NavBar from "./Navigation";
 import NavSelector from "./NavSelector";
 import Footer from "./Footer";
+import ShopBanner from "./shop components/ShopBanner";
 
 const Shop: React.FC = () => {
   const [toggleModal, setToggleModal] = useState<boolean>(false);
@@ -23,6 +24,7 @@ const Shop: React.FC = () => {
         isDialogOpen={toggleModal}
         onMouseLeave={handleMouseOut}
       />
+      <ShopBanner />
       <Footer />
       <h1>Shop</h1>
     </Fragment>
