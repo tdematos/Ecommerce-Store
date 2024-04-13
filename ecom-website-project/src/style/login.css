@@ -1,0 +1,48 @@
+.login-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 1000px;
+}
+
+.login-box {
+  background-color: var(--sand-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  width: 550px;
+}
+
+.login-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.login-text > h3 {
+  color: var(--darkBlue-color);
+  font-size: 45px;
+}
+
+.login-text > p {
+  color: var(--darkBlue-color);
+  font-size: 15px;
+}
+
+.hr-line {
+  border: 0;
+  clear: both;
+  width: 100%;
+  background-color: var(--darkBlue-color);
+  height: 1px;
+  margin-top: 25px;
+}
+
+.login-p-2 {
+  font-weight: 600;
+}
