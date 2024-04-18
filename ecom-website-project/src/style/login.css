@@ -98,4 +98,30 @@
   width: 250px;
   height: 70px;
   border: none;
+  transition: background-color 0.75s;
+}
+
+.form-button:hover {
+  cursor: pointer;
+  background-color: var(--orange-color);
+  color: var(--darkBlue-color);
+}
+
+.forgot-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 30px;
+  margin: 10px;
+}
+
+.reset-links {
+  color: var(--darkBlue-color);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.reset-links:hover {
+  cursor: pointer;
 }

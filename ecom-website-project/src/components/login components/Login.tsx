@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { Link } from "../../../node_modules/react-router-dom/dist/index";
 import NavBar from "../Navigation";
 import Footer from "../Footer";
 import "../../style/login.css";
@@ -39,7 +40,14 @@ const Login: React.FC = () => {
               <button className="form-button">Sign In</button>
             </form>
           </div>
-          <div className="forgot-signup"></div>
+          <div className="forgot-signup">
+            <Link to="passwordreset" className="reset-links">
+              Forgot/Reset password
+            </Link>
+            <Link to="register" className="reset-links">
+              Not a member? Join us!
+            </Link>
+          </div>
         </div>
       </section>
       <Footer />
