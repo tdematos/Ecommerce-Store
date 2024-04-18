@@ -18,10 +18,27 @@ const Login: React.FC = () => {
             <hr className="hr-line" />
             <p className="login-p-2">
               Insert your email and password below to Log In. Utilize the forgot
-              passowrd link below if you do not remember your password.
+              password link below if you do not remember your password.
             </p>
           </div>
-          <div className="form-container"></div>
+          <div className="form-container">
+            <form action="" className="form">
+              <div className="email-container ic">
+                <label htmlFor="" className="login-label">
+                  EMAIL ADDRESS
+                </label>
+                <input type="text" className="login-input" />
+              </div>
+              <div className="password-container ic">
+                <label htmlFor="" className="login-label">
+                  PASSWORD
+                </label>
+                <input type="text" className="login-input" />
+              </div>
+
+              <button className="form-button">Sign In</button>
+            </form>
+          </div>
           <div className="forgot-signup"></div>
         </div>
       </section>

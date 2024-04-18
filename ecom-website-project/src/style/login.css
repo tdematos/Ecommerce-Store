@@ -46,3 +46,56 @@
 .login-p-2 {
   font-weight: 600;
 }
+/*code for form section goes below*/
+.form-container {
+  width: 65%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.password-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.login-input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid lightgray;
+}
+
+.login-label {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.ic {
+  margin: 15px;
+}
+
+.form-button {
+  color: var(--sand-color);
+  background-color: var(--darkBlue-color);
+  font-size: 25px;
+  font-weight: 600;
+  margin: 15px;
+  width: 250px;
+  height: 70px;
+  border: none;
+}
