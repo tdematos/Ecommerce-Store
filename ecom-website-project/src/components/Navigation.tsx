@@ -25,10 +25,10 @@ const NavBar: React.FC<navLinks> = (props) => {
           onMouseOver={props.onMouseOver}
         />
         <div className="checkout">
-          <a href="" className="checkout-link">
+          <Link to="login" className="checkout-link">
             <IoPerson className="icon" />
             Sign In
-          </a>
+          </Link>
           <a href="" className="checkout-link">
             <FaCartShopping className="icon" />
             (0)
