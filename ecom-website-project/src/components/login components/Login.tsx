@@ -1,5 +1,6 @@
 import { Link } from "../../../node_modules/react-router-dom/dist/index";
 import React from "react";
+import "../../style/login.css";
 
 const Login: React.FC = () => {
   return (

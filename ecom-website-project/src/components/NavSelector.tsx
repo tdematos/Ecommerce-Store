@@ -5,7 +5,7 @@ interface navSelectorProps {
   navTitle: string;
   caption: string;
   isDialogOpen: boolean;
-  onMouseLeave: (event: React.MouseEvent<HTMLDivElement>) => void;
+  onMouseLeave: React.MouseEventHandler<HTMLDialogElement>;
 }
 
 const NavSelector: React.FC<navSelectorProps> = ({

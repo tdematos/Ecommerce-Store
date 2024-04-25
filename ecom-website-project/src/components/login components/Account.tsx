@@ -1,8 +1,5 @@
 import React, { Fragment } from "react";
-import {
-  Link,
-  Outlet,
-} from "../../../node_modules/react-router-dom/dist/index";
+import { Outlet } from "../../../node_modules/react-router-dom/dist/index";
 import NavBar from "../Navigation";
 import Footer from "../Footer";
 import "../../style/login.css";

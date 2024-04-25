@@ -5,7 +5,7 @@ import { Link } from "../../node_modules/react-router-dom/dist/index";
 interface NavLinksProps {
   aboutme: string;
   shop: string;
-  onMouseOver: (event: React.MouseEvent<HTMLDivElement>) => void;
+  onMouseOver?: React.MouseEventHandler<HTMLAnchorElement>;
 }
 
 const NavLinks: React.FC<NavLinksProps> = (props) => {

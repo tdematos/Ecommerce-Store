@@ -1,4 +1,4 @@
-import React, { Fragment } from "react/jsx-runtime";
+import React, { Fragment } from "react";
 import "../style/testimonialBanner.css";
 
 const TestimonialBanner: React.FC = () => {

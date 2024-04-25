@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, ReactElement, useState } from "react";
 import Banner from "./Banner";
 import NavBar from "./Navigation";
 import HeroSection from "./Hero";
@@ -11,7 +11,7 @@ import CTASection from "./CTASection";
 import Footer from "./Footer";
 import NavSelector from "./NavSelector";
 
-const HomePage: React.FC = () => {
+const HomePage: React.FC = (): ReactElement => {
   const [toggleModal, setToggleModal] = useState<boolean>(false);
 
   const handleMouseOver = () => {

@@ -5,9 +5,9 @@ import NavLinks from "./NavLinks";
 import { Link } from "../../node_modules/react-router-dom/dist/index";
 
 interface navLinks {
-  about: string;
-  shop: string;
-  onMouseOver: (event: React.MouseEvent<HTMLDivElement>) => void;
+  about?: string;
+  shop?: string;
+  onMouseOver?: React.MouseEventHandler<HTMLAnchorElement> | undefined;
 }
 
 const NavBar: React.FC<navLinks> = (props) => {
@@ -20,8 +20,8 @@ const NavBar: React.FC<navLinks> = (props) => {
           </Link>
         </h2>
         <NavLinks
-          aboutme={props.about}
-          shop={props.shop}
+          aboutme={props.about || ""}
+          shop={props.shop || ""}
           onMouseOver={props.onMouseOver}
         />
         <div className="checkout">
