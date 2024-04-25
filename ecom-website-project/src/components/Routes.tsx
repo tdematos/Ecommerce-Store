@@ -21,10 +21,10 @@ const Routes: Route[] = [
     errorElement: (<ErrorPage />) as React.ReactNode,
   },
   {
-    path: "about",
+    path: "/about",
     element: (<About />) as React.ReactNode,
   },
-  { path: "shop", element: (<Shop />) as React.ReactNode },
+  { path: "/shop", element: (<Shop />) as React.ReactNode },
   {
     path: "account",
     element: (<Account />) as React.ReactNode,

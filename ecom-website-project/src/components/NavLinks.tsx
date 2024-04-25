@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/hompage.css";
-import { Link } from "../../node_modules/react-router-dom/dist/index";
+import { NavLink } from "react-router-dom";
 
 interface NavLinksProps {
   aboutme: string;
@@ -13,14 +13,18 @@ const NavLinks: React.FC<NavLinksProps> = (props) => {
     <div className="menu-selection">
       <ul>
         <li>
-          <Link to="about" className="nav-link">
+          <NavLink to="/about" className="nav-link">
             {props.aboutme}
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="shop" className="nav-link" onMouseOver={props.onMouseOver}>
+          <NavLink
+            to="/shop"
+            className="nav-link"
+            onMouseOver={props.onMouseOver}
+          >
             {props.shop}
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </div>
