@@ -1,5 +1,7 @@
 import React from "react";
+import FormInput from "./FormInput";
 import { Link } from "../../../node_modules/react-router-dom/dist/index";
+import "../../style/login.css";
 
 const Register: React.FC = () => {
   return (
@@ -7,7 +9,7 @@ const Register: React.FC = () => {
       <section className="login-container">
         <div className="login-box">
           <div className="login-text">
-            <h3>Log In</h3>
+            <h3>Sign Up</h3>
             <p>
               Already have an account? <a href="">Log In</a>
             </p>
@@ -18,29 +20,17 @@ const Register: React.FC = () => {
           </div>
           <div className="form-container">
             <form action="" className="form">
-              <div className="email-container ic">
-                <label htmlFor="" className="login-label">
-                  FIRST NAME
-                </label>
-                <input type="text" className="login-input" />
-              </div>
-              <div className="password-container ic">
-                <label htmlFor="" className="login-label">
-                  LAST NAME
-                </label>
-                <input type="text" className="login-input" />
-              </div>
+              <FormInput label="FIRST NAME" type="text" />
+              <FormInput label="LAST NAME" type="text" />
+              <FormInput label="EMAIL" type="text" />
+              <FormInput label="PASSWORD (MIN. 5 CHARACTERS)" type="text" />
+              <p className="tos-link">
+                By creating an account, you agree to our{" "}
+                <Link to="/tos">Terms</Link>.
+              </p>
 
               <button className="form-button">Sign In</button>
             </form>
-          </div>
-          <div className="forgot-signup">
-            <Link to="/account/passwordreset" className="reset-links">
-              Forgot/Reset password
-            </Link>
-            <Link to="/account/register" className="reset-links">
-              Not a member? Join us!
-            </Link>
           </div>
         </div>
       </section>

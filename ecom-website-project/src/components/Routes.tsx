@@ -6,6 +6,7 @@ import Account from "./login components/Account";
 import ErrorPage from "./ErrorPage";
 import Login from "./login components/Login";
 import Register from "./login components/Register";
+import TermsOfService from "./Terms/TOS";
 
 interface Route {
   path: string;
@@ -25,6 +26,7 @@ const Routes: Route[] = [
     element: (<About />) as React.ReactNode,
   },
   { path: "/shop", element: (<Shop />) as React.ReactNode },
+  { path: "/tos", element: (<TermsOfService />) as React.ReactNode },
   {
     path: "account",
     element: (<Account />) as React.ReactNode,
