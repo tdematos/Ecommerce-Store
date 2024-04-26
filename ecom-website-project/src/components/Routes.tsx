@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Children } from "react";
 import App from "../App";
 import About from "./About";
 import Shop from "./Shop";
+import Products from "./shop components/Products";
 import Account from "./login components/Account";
 import ErrorPage from "./ErrorPage";
 import Login from "./login components/Login";
@@ -25,7 +26,16 @@ const Routes: Route[] = [
     path: "/about",
     element: (<About />) as React.ReactNode,
   },
-  { path: "/shop", element: (<Shop />) as React.ReactNode },
+  {
+    path: "/shop",
+    element: (<Shop />) as React.ReactNode,
+    children: [
+      {
+        path: "/products",
+        element: (<Products />) as React.ReactNode,
+      },
+    ],
+  },
   { path: "/tos", element: (<TermsOfService />) as React.ReactNode },
   {
     path: "account",
