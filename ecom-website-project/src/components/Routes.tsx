@@ -8,6 +8,7 @@ import ErrorPage from "./ErrorPage";
 import Login from "./login components/Login";
 import Register from "./login components/Register";
 import TermsOfService from "./Terms/TOS";
+import Collection from "./shop components/Collection";
 
 interface Route {
   path: string;
@@ -31,7 +32,11 @@ const Routes: Route[] = [
     element: (<Shop />) as React.ReactNode,
     children: [
       {
-        path: "/products",
+        path: "collection",
+        element: (<Collection />) as React.ReactNode,
+      },
+      {
+        path: "products",
         element: (<Products />) as React.ReactNode,
       },
     ],

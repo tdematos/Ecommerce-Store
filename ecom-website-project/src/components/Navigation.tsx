@@ -25,7 +25,7 @@ const NavBar: React.FC<navLinks> = (props) => {
           onMouseOver={props.onMouseOver}
         />
         <div className="checkout">
-          <Link to="account/login" className="checkout-link">
+          <Link to="/account/login" className="checkout-link">
             <IoPerson className="icon" />
             Sign In
           </Link>

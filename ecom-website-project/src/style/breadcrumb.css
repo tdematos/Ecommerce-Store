@@ -1,0 +1,18 @@
+.bc-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.bc-text {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--darkBlue-color);
+  margin: 5px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

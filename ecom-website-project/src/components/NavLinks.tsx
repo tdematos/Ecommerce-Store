@@ -19,7 +19,7 @@ const NavLinks: React.FC<NavLinksProps> = (props) => {
         </li>
         <li>
           <NavLink
-            to="/shop"
+            to="/shop/collection"
             className="nav-link"
             onMouseOver={props.onMouseOver}
           >

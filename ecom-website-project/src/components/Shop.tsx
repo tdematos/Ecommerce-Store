@@ -1,11 +1,9 @@
 import React, { Fragment, useState } from "react";
+import { Outlet } from "react-router-dom";
 import NavBar from "./Navigation";
 import NavSelector from "./NavSelector";
 import Footer from "./Footer";
-import ShopBanner from "./shop components/ShopBanner";
-import CategorySelector from "./shop components/CategorySelector";
 import ShopText from "./shop components/ShopText";
-import ItemContainer from "./shop components/ItemContainer";
 
 const Shop: React.FC = () => {
   const [toggleModal, setToggleModal] = useState<boolean>(false);
@@ -27,10 +25,7 @@ const Shop: React.FC = () => {
         isDialogOpen={toggleModal}
         onMouseLeave={handleMouseOut}
       />
-      <ShopBanner />
-      <CategorySelector />
-      <ItemContainer />
-      <ShopText />
+      <Outlet />
       <Footer />
     </Fragment>
   );
