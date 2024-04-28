@@ -1,0 +1,30 @@
+.item-Disp-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-disp-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.quatity-box {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+}
+
+.quant-counter {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid lightgray;
+}

@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import NavBar from "./Navigation";
 import NavSelector from "./NavSelector";
 import Footer from "./Footer";
-import ShopText from "./shop components/ShopText";
 
 const Shop: React.FC = () => {
   const [toggleModal, setToggleModal] = useState<boolean>(false);

@@ -3,6 +3,7 @@ import CategorySelector from "./CategorySelector";
 import ItemContainer from "./ItemContainer";
 import ShopBanner from "./ShopBanner";
 import ShopText from "./ShopText";
+import BreadCrumb from "../BreadCrumb";
 import React from "react";
 
 const Collection: React.FC = () => {
@@ -10,6 +11,7 @@ const Collection: React.FC = () => {
     <Fragment>
       <ShopBanner />
       <CategorySelector />
+      <BreadCrumb home="Home" arrow1="&gt;" shop="Shop" />
       <ItemContainer />
       <ShopText />
     </Fragment>
