@@ -13,6 +13,6 @@
   text-decoration: none;
 }
 
-a:hover {
+.bc-link:hover {
   text-decoration: underline;
 }

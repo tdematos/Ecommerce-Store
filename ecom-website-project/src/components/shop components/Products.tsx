@@ -13,12 +13,28 @@ const Products: React.FC = () => {
         products="Products"
       />
       <div className="item-Disp-container">
-        <div className="photo-carousal"></div>
+        <div className="photo-carousal">
+          <div className="item-select">
+            <div className="sm-photo">
+              <a href=""></a>
+            </div>
+            <div className="sm-photo">
+              <a href=""></a>
+            </div>
+          </div>
+          <div className="main-item-display">
+            <div className="main-item">
+              <a href=""></a>
+            </div>
+          </div>
+        </div>
         <div className="item-disp-info">
           <div className="title-text">
-            <h4 className="item-title">Club Max Z</h4>
-            <p>Extremely strong titanium which is made for the pro's</p>
-            <p className="item-price">$10</p>
+            <h4 className="item-disp-title">Club Max Z</h4>
+            <p className="item-disp-desc">
+              Extremely strong titanium which is made for the pro's
+            </p>
+            <p className="item-price">$10.00</p>
           </div>
 
           <div className="quantity-container">
@@ -29,11 +45,11 @@ const Products: React.FC = () => {
                   <p>1</p>
                 </div>
                 <div className="count-direction">
-                  <div className="count-up">Up</div>
-                  <div className="count-down">Down</div>
+                  <button className="count-up">&#9650;</button>
+                  <button className="count-down">&#9660;</button>
                 </div>
               </div>
-              <button>Add to Cart</button>
+              <button className="count-cta">Add to Cart</button>
             </div>
           </div>
         </div>

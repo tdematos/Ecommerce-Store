@@ -1,0 +1,27 @@
+{
+  "folders": [
+	{
+		"name": "Ecommerce-Store",
+		"path": "../../.."
+	},
+	{
+		"name": "Portfolio-Website",
+		"path": "../../../../Portfolio-Website"
+	},
+	{
+		"name": "Calculator-TOP",
+		"path": "../../../../Calculator-TOP"
+	},
+	{
+		"name": "Understanding TypeScript",
+		"path": "../../../../Understanding TypeScript"
+	},
+	{
+		"name": "React-CV-Generator",
+		"path": "../../../../React-CV-Generator"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Portfolio-Website"
+  }
+}

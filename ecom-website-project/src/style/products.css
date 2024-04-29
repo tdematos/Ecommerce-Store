@@ -1,13 +1,61 @@
 .item-Disp-container {
   display: flex;
   flex-direction: row;
+  height: 550px;
 }
 
+.photo-carousal {
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main-item-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main-item {
+  width: 500px;
+  height: 500px;
+  background-color: var(--sand-color);
+  margin: 10px;
+}
+
+.sm-photo {
+  height: 80px;
+  width: 80px;
+  background-color: green;
+  margin: 10px;
+}
+
+/*Item Description styling goes below*/
 .item-disp-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+.item-disp-title {
+  font-weight: 900;
+  font-size: 30px;
+  color: var(--darkBlue-color);
+  margin: 0px;
+}
+
+.item-disp-desc {
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.item-price {
+  margin-bottom: 20px;
 }
 
 .quantity-container {
@@ -15,16 +63,67 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  width: 100%;
+}
+
+.quant-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--darkBlue-color);
+  margin: 0px 0px 10px 0px;
 }
 
 .quatity-box {
   display: flex;
   flex-direction: row;
   height: 100px;
+  width: 100%;
 }
 
 .quant-counter {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   border: 1px solid lightgray;
+  height: 60px;
+  width: 80px;
+}
+
+.number-count {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.count-direction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.count-up,
+.count-down {
+  height: 100%;
+  background-color: white;
+  border: solid 1px lightgray;
+}
+
+.count-up:hover,
+.count-down:hover {
+  background-color: rgb(225, 238, 242);
+  cursor: pointer;
+}
+
+.count-cta {
+  background-color: var(--darkBlue-color);
+  color: var(--sand-color);
+  font-weight: 600;
+  font-size: 20px;
+  border: none;
+  margin: 0px 15px;
+  height: 60px;
+  width: 200px;
 }
