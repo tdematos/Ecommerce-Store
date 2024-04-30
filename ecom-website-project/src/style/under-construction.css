@@ -1,0 +1,44 @@
+.uc-modal[open] {
+  position: absolute;
+  z-index: 1;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--lightsand-color);
+}
+
+.uc-title {
+  color: var(--darkBlue-color);
+  line-height: 60px;
+  font-size: 50px;
+  margin: 0px;
+  width: 90%;
+}
+
+.uc-text {
+  font-weight: 500;
+  font-size: 14px;
+  margin: 10px;
+}
+
+.uc-button {
+  color: var(--sand-color);
+  background-color: var(--darkBlue-color);
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  padding: 10px 25px 10px 25px;
+  transition: background-color 0.75s;
+}
+
+.uc-button:hover {
+  background-color: var(--orange-color);
+  cursor: pointer;
+  color: var(--darkBlue-color);
+}
