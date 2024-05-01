@@ -37,6 +37,19 @@ const Products: React.FC = () => {
             <p className="item-price">$10.00</p>
           </div>
 
+          <div className="item-descriptioin-container">
+            <p className="item-description">
+              Club is made out of titanium, and has unbelieveable power when
+              using on the field. Will make anyone feel like a pro.
+            </p>
+            <ul id="item-list-info">
+              <li>Made out of unique titanium</li>
+              <li>Lighter than a feather</li>
+              <li>Comes in one color</li>
+              <li>handle is unbreakable</li>
+            </ul>
+          </div>
+
           <div className="quantity-container">
             <div className="quant-title">Quantity</div>
             <div className="quatity-box">

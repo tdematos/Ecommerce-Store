@@ -105,7 +105,7 @@ hr {
   justify-content: center;
 }
 
-li {
+.benefit-checklist {
   font-size: 20px;
   list-style-type: none;
   color: rgb(1, 88, 1);
