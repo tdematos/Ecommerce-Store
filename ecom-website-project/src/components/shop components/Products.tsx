@@ -1,6 +1,8 @@
 import React from "react";
 import BreadCrumb from "../BreadCrumb";
 import "../../style/products.css";
+import ItemCarousal from "../ItemCarousal";
+import CTABanner from "./CTABanner";
 
 const Products: React.FC = () => {
   return (
@@ -67,6 +69,8 @@ const Products: React.FC = () => {
           </div>
         </div>
       </div>
+      <ItemCarousal />
+      <CTABanner />
     </div>
   );
 };

@@ -149,3 +149,70 @@
   color: var(--darkBlue-color);
   font-size: 14px;
 }
+
+/*CTA section code goes below*/
+.cta-container {
+  height: 350px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 100px;
+}
+
+.cta-title {
+  color: var(--darkBlue-color);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.cta-heading {
+  color: var(--darkBlue-color);
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.cta-subheading {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--darkBlue-color);
+  margin-bottom: 20px;
+}
+
+.product-cta {
+  color: var(--sand-color);
+  background-color: var(--darkBlue-color);
+  border: none;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 15px 25px 15px 25px;
+  transition: background-color 0.75s;
+}
+
+.cta-pic-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-square {
+  background-color: darkcyan;
+  width: 300px;
+  height: 300px;
+}
+
+.product-cta:hover {
+  background-color: var(--orange-color);
+  color: var(--darkBlue-color);
+  cursor: pointer;
+}
