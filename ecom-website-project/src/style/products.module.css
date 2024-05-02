@@ -128,6 +128,13 @@
   margin: 0px 15px;
   height: 60px;
   width: 200px;
+  transition: background-color 0.75s;
+}
+
+.count-cta:hover {
+  background-color: var(--orange-color);
+  color: var(--darkBlue-color);
+  cursor: pointer;
 }
 
 .item-descriptioin-container {
