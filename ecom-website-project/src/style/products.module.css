@@ -216,3 +216,63 @@
   color: var(--darkBlue-color);
   cursor: pointer;
 }
+
+/*product benefit styling goes below*/
+.pbContainer {
+  height: 450px;
+  background-color: var(--lightsand-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pbTtileBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pbTtile {
+  color: var(--darkBlue-color);
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.pbboxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.pbBox {
+  width: 350px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.pbPhoto {
+  width: 100px;
+  height: 100px;
+  border-radius: 25px;
+  background-color: red;
+  margin-bottom: 15px;
+}
+
+.pbBoxtitle {
+  color: var(--darkBlue-color);
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.pbBoxSubTitle {
+  color: var(--darkBlue-color);
+  font-size: 12px;
+}
