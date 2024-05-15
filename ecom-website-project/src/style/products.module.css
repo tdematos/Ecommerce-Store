@@ -283,3 +283,50 @@
   color: var(--darkBlue-color);
   font-size: 12px;
 }
+
+/* Item description styling goes below */
+
+.itemInfoContainer {
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemInfoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-top: solid 1px black;
+  width: 80%;
+}
+
+.itemInfoText {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.itemsInfoDescriptionTitle {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--orange-color);
+  margin: 10px 0px 10px 0px;
+}
+
+.itemsInfoDescriptionIcon {
+  font-size: 25px;
+  color: var(--orange-color);
+  margin: 10px 0px 10px 0px;
+}
+
+.itemsInfoDescriptionIcon:hover {
+  cursor: pointer;
+}
+
+.itemInfoDescription {
+  font-size: 15px;
+  color: var(--darkBlue-color);
+}

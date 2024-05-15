@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import BreadCrumb from "../BreadCrumb";
 import styles from "../../style/products.module.css";
 import ItemCarousal from "../ItemCarousal";
 import CTABanner from "./CTABanner";
 import ProductBenefit from "./ProductBenefit";
+import ProductInfoBox from "./ProductInfoBox";
 
 const Products: React.FC = () => {
+  const [toggleMenu, setToggleMenu] = useState<boolean>(false);
+
+  const handleIconClick = () => {
+    toggleMenu ? setToggleMenu(false) : setToggleMenu(true);
+  };
+
   return (
     <div>
       <BreadCrumb
@@ -70,6 +77,12 @@ const Products: React.FC = () => {
           </div>
         </div>
       </div>
+      <ProductInfoBox
+        title="Item Info"
+        icon={toggleMenu ? "-" : "+"}
+        description={toggleMenu ? "Test Test Test" : null}
+        onClick={handleIconClick}
+      />
       <ProductBenefit />
       <ItemCarousal />
       <CTABanner />
