@@ -26,7 +26,13 @@ const Account: React.FC = () => {
         onMouseLeave={handleMouseOut}
       />
       <Outlet />
-      <Footer />
+      <Footer
+        shopLink="shop/collection"
+        aboutLink="/about"
+        tosLink="/tos"
+        privacyPolicyLink="/"
+        contactUsLink="/"
+      />
     </Fragment>
   );
 };

@@ -3,11 +3,11 @@ import "../style/Footer.css";
 import { Link } from "react-router-dom";
 
 interface FooterProps {
-  shopLink?: string;
-  aboutLink?: string;
-  tosLink?: string;
-  privacyPolicyLink?: string;
-  contactUsLink?: string;
+  shopLink: string;
+  aboutLink: string;
+  tosLink: string;
+  privacyPolicyLink: string;
+  contactUsLink: string;
 }
 
 const Footer: React.FC<FooterProps> = ({

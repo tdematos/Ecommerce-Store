@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import App from "../App";
 import About from "./About";
 import Shop from "./Shop";

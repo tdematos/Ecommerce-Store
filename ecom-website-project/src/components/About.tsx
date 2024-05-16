@@ -6,7 +6,6 @@ import NavSelector from "./NavSelector";
 
 const About: React.FC = () => {
   const [toggleModal, setToggleModal] = useState<boolean>(false);
-  const [UCToggle, setUCToggle] = useState<boolean>(true);
 
   const handleMouseOver = () => {
     setToggleModal(true);
@@ -39,7 +38,13 @@ const About: React.FC = () => {
           </p>
         </div>
       </div>
-      <Footer />
+      <Footer
+        shopLink="shop/collection"
+        aboutLink="/about"
+        tosLink="/tos"
+        privacyPolicyLink="/"
+        contactUsLink="/"
+      />
     </Fragment>
   );
 };
