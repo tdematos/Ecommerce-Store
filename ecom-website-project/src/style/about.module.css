@@ -1,0 +1,44 @@
+.aboutPagecontainer {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutPageBox {
+  background-color: var(--sand-color);
+  height: 70%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.aboutUsImage {
+  height: 150px;
+  width: 150px;
+  background-color: blue;
+  margin: 30px;
+  border-radius: 20px;
+}
+
+.aboutUSTitle {
+  color: var(--darkBlue-color);
+  font-size: 55px;
+  padding: 0px;
+  margin: 15px 0px 0px 0px;
+}
+
+.aboutUSSubTitle {
+  color: var(--darkBlue-color);
+  font-size: 20px;
+  margin: 0px 0px 15px 0px;
+}
+
+.aboutUSDescription {
+  color: var(--darkBlue-color);
+  width: 80%;
+  font-weight: 300;
+}
