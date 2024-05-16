@@ -1,7 +1,22 @@
 import React, { Fragment } from "react";
 import "../style/Footer.css";
+import { Link } from "react-router-dom";
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  shopLink?: string;
+  aboutLink?: string;
+  tosLink?: string;
+  privacyPolicyLink?: string;
+  contactUsLink?: string;
+}
+
+const Footer: React.FC<FooterProps> = ({
+  shopLink,
+  aboutLink,
+  tosLink,
+  privacyPolicyLink,
+  contactUsLink,
+}) => {
   let currentDate: Date = new Date();
   let currentYear: number = currentDate.getFullYear();
 
@@ -11,19 +26,19 @@ const Footer: React.FC = () => {
         <div className="site-links-container">
           <ul className="link-list">
             <li>
-              <a href="">Shop</a>
+              <Link to={shopLink}>Shop</Link>
             </li>
             <li>
-              <a href="">About Us</a>
+              <Link to={aboutLink}>About Us</Link>
             </li>
             <li>
-              <a href="">Terms of Service</a>
+              <Link to={tosLink}>Terms of Service</Link>
             </li>
             <li>
-              <a href="">Privacy Policy</a>
+              <Link to={privacyPolicyLink}>Privacy Policy</Link>
             </li>
             <li>
-              <a href="">Contact US</a>
+              <Link to={contactUsLink}>Contact US</Link>
             </li>
           </ul>
         </div>

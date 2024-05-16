@@ -53,7 +53,7 @@ const HomePage: React.FC = (): ReactElement => {
       <TestimonialBanner />
       <CTASection />
       <ItemCarousal />
-      <Footer />
+      <Footer shopLink="shop/collection" aboutLink="/about" tosLink="/tos" />
     </Fragment>
   );
 };
