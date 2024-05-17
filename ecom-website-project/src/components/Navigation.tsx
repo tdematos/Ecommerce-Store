@@ -29,7 +29,7 @@ const NavBar: React.FC<navLinks> = (props) => {
             <IoPerson className="icon" />
             Sign In
           </Link>
-          <a href="" className="checkout-link">
+          <a href="/account/checkout" className="checkout-link">
             <FaCartShopping className="icon" />
             (0)
           </a>

@@ -9,6 +9,7 @@ import Login from "./login components/Login";
 import Register from "./login components/Register";
 import TermsOfService from "./Terms/TOS";
 import Collection from "./shop components/Collection";
+import CheckOut from "./ CheckOut";
 
 interface Route {
   path: string;
@@ -53,6 +54,10 @@ const Routes: Route[] = [
       {
         path: "register",
         element: (<Register />) as React.ReactNode,
+      },
+      {
+        path: "checkout",
+        element: (<CheckOut />) as React.ReactNode,
       },
     ],
   },
