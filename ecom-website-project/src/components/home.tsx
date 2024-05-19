@@ -45,7 +45,13 @@ const HomePage: React.FC = (): ReactElement => {
         isDialogOpen={toggleModal}
         onMouseLeave={handleMouseOut}
       />
-      <HeroSection />
+      <HeroSection
+        title="ALL OF THIS FOR 50% OFF"
+        subtext="NEW MEMBERS GET ADDITIONAL DISCOUNT"
+        text="all you need is here at WON STOP SHOP."
+        btntext="START SHOPPING"
+        btntext2="FREE SHIPPING"
+      />
       <SmallBanner />
       <ItemCarousal />
       <ItemCompare />

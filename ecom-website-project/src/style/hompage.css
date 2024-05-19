@@ -90,6 +90,16 @@
 .hero-img {
   width: 50%;
   background-color: var(--sand-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  height: 70%;
+  width: 60%;
+  border-radius: 20px;
+  box-shadow: 5px 10px #888888;
 }
 
 .cta-button {
@@ -102,6 +112,11 @@
   margin-top: 15px;
   margin-bottom: 15px;
   transition: background-color 0.75s;
+}
+
+.cta-button > a {
+  text-decoration: none;
+  color: var(--darkBlue-color);
 }
 
 .cta-button:hover {

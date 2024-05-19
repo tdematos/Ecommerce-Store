@@ -1,20 +1,34 @@
 import React, { Fragment } from "react";
 import "../style/hompage.css";
+import imgLogo from "../assets/hero-img.png";
+import { Link } from "react-router-dom";
 
-const HeroSection: React.FC = () => {
+interface HeroProps {
+  title: string;
+  subtext: string;
+  text: string;
+  btntext: string;
+  btntext2: string;
+}
+
+const HeroSection: React.FC<HeroProps> = (props) => {
   return (
     <Fragment>
       <section className="hero">
         <div className="hero-cta">
           <div className="hero-text">
-            <h2>ALL OF THIS FOR 50% OFF</h2>
-            <p className="hero-subtext">NEW MEMBERS GET ADDITIONAL DISCOUNT</p>
-            <p>all you need is here at WON STOP SHOP.</p>
-            <button className="cta-button">START SHOPPING</button>
-            <p className="hero-subtext">FREE SHIPPING</p>
+            <h2>{props.title}</h2>
+            <p className="hero-subtext">{props.subtext}</p>
+            <p>{props.text}</p>
+            <button className="cta-button">
+              <Link to="shop/collection">{props.btntext}</Link>
+            </button>
+            <p className="hero-subtext">{props.btntext2}</p>
           </div>
         </div>
-        <div className="hero-img"></div>
+        <div className="hero-img">
+          <img className="hero-image" src={imgLogo} alt="" />
+        </div>
       </section>
     </Fragment>
   );
