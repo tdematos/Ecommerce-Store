@@ -2,16 +2,30 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../style/itemCarousal.css";
 
-const ItemCard: React.FC = () => {
+interface ItemCardInt {
+  itemImage: string;
+  altText: string;
+  itemTitle: string;
+  itemDesc: string;
+  itemPrice: number;
+}
+
+const ItemCard: React.FC<ItemCardInt> = (props) => {
   return (
     <div className="item-card">
-      <div className="item-img"></div>
+      <div className="item-img">
+        <img
+          className="item-card-img"
+          src={props.itemImage}
+          alt={props.altText}
+        />
+      </div>
       <div className="item-info">
         <p className="item-title">
-          <Link to="/shop/products">Extreme Golf Club</Link>
+          <Link to="/shop/products">{props.itemTitle}</Link>
         </p>
-        <p className="item-description">Carbon fiber driver</p>
-        <p className="item-price">$75.99</p>
+        <p className="item-description">{props.itemDesc}</p>
+        <p className="item-price">${props.itemPrice}</p>
       </div>
     </div>
   );

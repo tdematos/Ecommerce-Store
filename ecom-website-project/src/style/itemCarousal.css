@@ -43,16 +43,24 @@ h3 {
   width: 160px;
   height: 50px;
   background-color: var(--darkBlue-color);
-  color: var(--sand-color);
   border: none;
-  font-weight: 600;
   margin-right: 60px;
   transition: background-color 0.75s;
+}
+
+.item-menu-btn > a {
+  text-decoration: none;
+  color: var(--sand-color);
+  font-weight: 600;
 }
 
 .item-menu-btn:hover {
   cursor: pointer;
   background-color: var(--orange-color);
+  color: var(--darkBlue-color);
+}
+
+.item-menu-btn > a:hover {
   color: var(--darkBlue-color);
 }
 
@@ -68,10 +76,29 @@ h3 {
 .item-img {
   height: 275px;
   background-color: var(--sand-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-card-img {
+  height: 70%;
+  width: 60%;
+  box-shadow: 5px 10px #888888;
+  border-radius: 10px;
 }
 
 .item-title {
   font-weight: 500;
+}
+
+.item-title > a {
+  text-decoration: none;
+  color: var(--darkBlue-color);
+}
+
+.item-title > a:hover {
+  color: var(--orange-color);
 }
 
 .item-description,
