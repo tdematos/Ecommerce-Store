@@ -34,7 +34,7 @@ const ItemCompare: React.FC = () => {
                     />
                   )}
                 </div>
-                <h4>{products[2].title}</h4>
+                {products[2] && <h4>{products[2].title}</h4>}
                 <button className="item-cta">BUY FOR $30</button>
               </div>
 
@@ -48,7 +48,7 @@ const ItemCompare: React.FC = () => {
                     />
                   )}
                 </div>
-                <h4>{products[3].title}</h4>
+                {products[3] && <h4>{products[3].title}</h4>}
                 <button className="item-cta">BUY FOR $30</button>
               </div>
             </div>
