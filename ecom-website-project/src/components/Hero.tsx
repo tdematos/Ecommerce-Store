@@ -37,7 +37,13 @@ const HeroSection: React.FC<HeroProps> = (props) => {
           </div>
         </div>
         <div className="hero-img">
-          <img className="hero-image" src={products[0].image} alt="" />
+          {products.length > 0 && (
+            <img
+              className="hero-image"
+              src={products[0].image}
+              alt="backpack"
+            />
+          )}
         </div>
       </section>
     </Fragment>
