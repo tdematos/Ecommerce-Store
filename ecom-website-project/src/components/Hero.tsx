@@ -1,6 +1,5 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import "../style/hompage.css";
-import imgLogo from "../assets/hero-img.png";
 import { Link } from "react-router-dom";
 
 interface HeroProps {
@@ -12,6 +11,17 @@ interface HeroProps {
 }
 
 const HeroSection: React.FC<HeroProps> = (props) => {
+  const [products, setProducts] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products?limit=4")
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data); // Set the array of products
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
   return (
     <Fragment>
       <section className="hero">
@@ -27,7 +37,7 @@ const HeroSection: React.FC<HeroProps> = (props) => {
           </div>
         </div>
         <div className="hero-img">
-          <img className="hero-image" src={imgLogo} alt="" />
+          <img className="hero-image" src={products[0].image} alt="" />
         </div>
       </section>
     </Fragment>
