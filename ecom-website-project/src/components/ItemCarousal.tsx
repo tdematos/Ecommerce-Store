@@ -1,15 +1,27 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import "../style/itemCarousal.css";
 import ItemCard from "./ItemCard";
 import { Link } from "react-router-dom";
-import spyro from "../assets/spyro.png";
-import smash from "../assets/smash.png";
-import mario from "../assets/mariobros.png";
-import soccer from "../assets/marioSoccer.png";
 
-interface ItemCarousalInt {}
+const truncateText = (text: string, maxLength: number) => {
+  if (text.length <= maxLength) {
+    return text;
+  }
+  return text.slice(0, maxLength) + "...";
+};
 
-const ItemCarousal: React.FC<ItemCarousalInt> = (props) => {
+const ItemCarousal: React.FC = () => {
+  const [products, setProducts] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products?limit=4")
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data); // Set the array of products
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
   return (
     <Fragment>
       <section className="item-carousal">
@@ -24,34 +36,16 @@ const ItemCarousal: React.FC<ItemCarousalInt> = (props) => {
             <p>&lt;</p>
           </div>
           <div className="item-box">
-            <ItemCard
-              itemImage={spyro}
-              altText="spyro game"
-              itemTitle="Spyro"
-              itemDesc="Switch Game"
-              itemPrice={49}
-            />
-            <ItemCard
-              itemImage={smash}
-              altText="Super Smash Bros Game"
-              itemTitle="Super Smash Bros Ultimate"
-              itemDesc="Switch Game"
-              itemPrice={49}
-            />
-            <ItemCard
-              itemImage={mario}
-              altText="Super Mario Maker Game"
-              itemTitle="Super Mario Maker 2"
-              itemDesc="Switch Game"
-              itemPrice={49}
-            />
-            <ItemCard
-              itemImage={soccer}
-              altText="Mario Striker Soccer Game"
-              itemTitle="Mario Strikers Football"
-              itemDesc="Switch Game"
-              itemPrice={49}
-            />
+            {products.map((product) => (
+              <ItemCard
+                key={product.id}
+                itemImage={product.image}
+                altText={product.title}
+                itemTitle={product.title}
+                itemDesc={truncateText(product.description, 50)} // Truncate description
+                itemPrice={product.price}
+              />
+            ))}
             <div className="right-select">
               <p>&gt;</p>
             </div>

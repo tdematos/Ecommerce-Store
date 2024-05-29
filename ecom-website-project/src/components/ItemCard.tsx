@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import "../style/itemCarousal.css";
 
 interface ItemCardInt {
-  itemImage: string;
-  altText: string;
-  itemTitle: string;
-  itemDesc: string;
-  itemPrice: number;
+  itemImage?: string;
+  altText?: string;
+  itemTitle?: string;
+  itemDesc?: string;
+  itemPrice?: number;
 }
 
 const ItemCard: React.FC<ItemCardInt> = (props) => {
