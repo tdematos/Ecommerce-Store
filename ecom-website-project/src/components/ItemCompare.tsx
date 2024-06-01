@@ -59,8 +59,22 @@ const ItemCompare: React.FC = () => {
           <h3 className="benefit-header">Benefits</h3>
           <hr />
           <div className="compare-container">
-            <CompareColumn />
-            <CompareColumn />
+            <CompareColumn
+              benefit1="Nice Brown color"
+              benefit2="High-strength Zipper"
+              benefit3="High-quality Material"
+              benefit4="Water resistant"
+              benefit5="Cuffs has latches"
+              benefit6="Breathable Fabric"
+            />
+            <CompareColumn
+              benefit1="Elastic Material"
+              benefit2="Deep Blue color"
+              benefit3="Slim fit"
+              benefit4="Breathable material"
+              benefit5="Ligth fabric"
+              benefit6="Modern fit"
+            />
           </div>
         </div>
         <div className="verticle-compare"></div>

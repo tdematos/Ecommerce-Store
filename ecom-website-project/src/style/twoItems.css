@@ -31,6 +31,10 @@
   background-color: green;
   border-radius: 100px;
   margin: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 }
 
 .item-headline {
@@ -69,4 +73,13 @@
   background-color: rgb(41, 159, 209);
   border-radius: 100px;
   margin: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.twoprod-img {
+  height: 90%;
+  width: 90%;
+  border-radius: 50%;
 }

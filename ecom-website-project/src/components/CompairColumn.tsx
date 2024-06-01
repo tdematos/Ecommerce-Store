@@ -1,16 +1,25 @@
 import React from "react";
 import "../style/itemCompare.css";
 
-const CompareColumn: React.FC = () => {
+interface PropBenefit {
+  benefit1: string;
+  benefit2: string;
+  benefit3: string;
+  benefit4: string;
+  benefit5: string;
+  benefit6: string;
+}
+
+const CompareColumn: React.FC<PropBenefit> = (props) => {
   return (
     <div className="compare-column">
       <ul className="benefit-checklist">
-        <li>Fast</li>
-        <li>Light</li>
-        <li>Stable</li>
-        <li>Bright</li>
-        <li>Strong</li>
-        <li>flashy</li>
+        <li>{props.benefit1}</li>
+        <li>{props.benefit2}</li>
+        <li>{props.benefit3}</li>
+        <li>{props.benefit4}</li>
+        <li>{props.benefit5}</li>
+        <li>{props.benefit6}</li>
       </ul>
     </div>
   );
