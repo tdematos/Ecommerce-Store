@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import "../style/testimonialBanner.css";
+import { reviews } from "./Reviews";
 
 const TestimonialBanner: React.FC = () => {
   return (
@@ -11,10 +12,9 @@ const TestimonialBanner: React.FC = () => {
         <div className="testimonial-container">
           <h3 className="testimonial-title">Happy Customers</h3>
           <p className="written-testimonial">
-            "I can't believe I did not buy this item sooner, next time I will
-            buy two!"
+            {reviews[0] && reviews[0].review}
           </p>
-          <p className="customer-name">- JOHN, MEMBER SINCE OCTOBER 2021</p>
+          <p className="customer-name">{reviews[0] && reviews[0].person}</p>
           <div className="t-selector">
             <div className="round-select"></div>
             <div className="round-select"></div>

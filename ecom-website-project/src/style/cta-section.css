@@ -33,6 +33,9 @@
   width: 50%;
   height: 100%;
   background-color: var(--lightsand-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cta-box {
@@ -74,4 +77,9 @@
   background-color: var(--orange-color);
   color: var(--darkBlue-color);
   cursor: pointer;
+}
+
+.cta-image-1 {
+  height: 90%;
+  width: 90%;
 }
