@@ -10,22 +10,26 @@ interface ItemCardInt {
   itemPrice?: number;
 }
 
-const ItemCard: React.FC<ItemCardInt> = (props) => {
+const ItemCard: React.FC<ItemCardInt> = ({
+  itemImage,
+  altText,
+  itemTitle,
+  itemDesc,
+  itemPrice,
+}) => {
   return (
     <div className="item-card">
       <div className="item-img">
-        <img
-          className="item-card-img"
-          src={props.itemImage}
-          alt={props.altText}
-        />
+        <img className="item-card-img" src={itemImage} alt={altText} />
       </div>
       <div className="item-info">
         <p className="item-title">
-          <Link to="/shop/products">{props.itemTitle}</Link>
+          <Link to={`/shop/products/${encodeURIComponent(itemTitle || "")}`}>
+            {itemTitle}
+          </Link>
         </p>
-        <p className="item-description">{props.itemDesc}</p>
-        <p className="item-price">${props.itemPrice}</p>
+        <p className="item-description">{itemDesc}</p>
+        <p className="item-price">${itemPrice}</p>
       </div>
     </div>
   );

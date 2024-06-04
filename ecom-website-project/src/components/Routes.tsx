@@ -37,7 +37,7 @@ const Routes: Route[] = [
         element: (<Collection />) as React.ReactNode,
       },
       {
-        path: "products",
+        path: "products/:itemName",
         element: (<Products />) as React.ReactNode,
       },
     ],

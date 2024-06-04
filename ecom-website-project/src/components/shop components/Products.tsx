@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import BreadCrumb from "../BreadCrumb";
 import styles from "../../style/products.module.css";
 import ItemCarousal from "../ItemCarousal";
@@ -7,11 +8,28 @@ import ProductBenefit from "./ProductBenefit";
 import ProductInfoBox from "./ProductInfoBox";
 
 const Products: React.FC = () => {
+  const { itemName } = useParams<{ itemName: string }>();
+  const [product, setProduct] = useState<any>(null);
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
+
+  useEffect(() => {
+    fetch(
+      `https://fakestoreapi.com/products?title=${encodeURIComponent(itemName)}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setProduct(data[0]); // Assuming the API returns an array
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  }, [itemName]);
 
   const handleIconClick = () => {
     toggleMenu ? setToggleMenu(false) : setToggleMenu(true);
   };
+
+  if (!product) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>
@@ -20,7 +38,7 @@ const Products: React.FC = () => {
         arrow1="&gt;"
         shop="Shop"
         arrow2="&gt;"
-        products="Products"
+        products={product.title}
       />
       <div className={styles["item-Disp-container"]}>
         <div className={styles["photo-carousal"]}>
@@ -34,24 +52,19 @@ const Products: React.FC = () => {
           </div>
           <div className={styles["main-item-display"]}>
             <div className={styles["main-item"]}>
-              <a href=""></a>
+              <img src={product.image} alt={product.title} />
             </div>
           </div>
         </div>
         <div className={styles["item-disp-info"]}>
           <div className={styles["title-text"]}>
-            <h4 className={styles["item-disp-title"]}>Club Max Z</h4>
-            <p className={styles["item-disp-desc"]}>
-              Extremely strong titanium which is made for the pro's
-            </p>
-            <p className={styles["item-price"]}>$10.00</p>
+            <h4 className={styles["item-disp-title"]}>{product.title}</h4>
+            <p className={styles["item-disp-desc"]}>{product.description}</p>
+            <p className={styles["item-price"]}>${product.price}</p>
           </div>
 
           <div className={styles["item-descriptioin-container"]}>
-            <p className={styles["item-description"]}>
-              Club is made out of titanium, and has unbelieveable power when
-              using on the field. Will make anyone feel like a pro.
-            </p>
+            <p className={styles["item-description"]}>{product.description}</p>
             <ul id={styles["item-list-info"]}>
               <li>Made out of unique titanium</li>
               <li>Lighter than a feather</li>
