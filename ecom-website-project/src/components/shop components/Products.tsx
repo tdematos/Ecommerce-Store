@@ -9,23 +9,35 @@ import ProductInfoBox from "./ProductInfoBox";
 
 const Products: React.FC = () => {
   const { itemName } = useParams<{ itemName: string }>();
+  const [products, setProducts] = useState<any[]>([]);
   const [product, setProduct] = useState<any>(null);
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
   useEffect(() => {
-    fetch(
-      `https://fakestoreapi.com/products?title=${encodeURIComponent(itemName)}`
-    )
+    fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((data) => {
-        setProduct(data[0]); // Assuming the API returns an array
+        setProducts(data);
       })
       .catch((error) => console.error("Error fetching data:", error));
-  }, [itemName]);
+  }, []);
+
+  useEffect(() => {
+    if (itemName && products.length > 0) {
+      const foundProduct = products.find(
+        (p) => p.title === decodeURIComponent(itemName)
+      );
+      setProduct(foundProduct);
+    }
+  }, [itemName, products]);
 
   const handleIconClick = () => {
-    toggleMenu ? setToggleMenu(false) : setToggleMenu(true);
+    setToggleMenu((prevToggle) => !prevToggle);
   };
+
+  if (!itemName) {
+    return <div>No item name provided in URL parameters.</div>;
+  }
 
   if (!product) {
     return <div>Loading...</div>;

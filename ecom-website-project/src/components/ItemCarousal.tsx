@@ -14,7 +14,7 @@ const ItemCarousal: React.FC = () => {
   const [products, setProducts] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products?limit=4")
+    fetch("https://fakestoreapi.com/products?limit=6")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data); // Set the array of products
@@ -36,16 +36,19 @@ const ItemCarousal: React.FC = () => {
             <p>&lt;</p>
           </div>
           <div className="item-box">
-            {products.map((product) => (
-              <ItemCard
-                key={product.id}
-                itemImage={product.image}
-                altText={product.title}
-                itemTitle={product.title}
-                itemDesc={truncateText(product.description, 50)} // Truncate description
-                itemPrice={product.price}
-              />
-            ))}
+            <div className="item-inner-box">
+              {products.map((product) => (
+                <ItemCard
+                  key={product.id}
+                  itemImage={product.image}
+                  altText={product.title}
+                  itemTitle={truncateText(product.title, 20)}
+                  itemDesc={truncateText(product.description, 50)}
+                  itemPrice={product.price}
+                />
+              ))}
+            </div>
+
             <div className="right-select">
               <p>&gt;</p>
             </div>

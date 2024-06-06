@@ -1,7 +1,7 @@
 .item-carousal {
   display: flex;
   flex-direction: center;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: var(--white-color);
   height: 700px;
@@ -33,10 +33,18 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .item-card {
-  margin-top: 30px;
+  margin: 20px 20px 20px 20px;
+}
+
+.item-inner-box {
+  width: 150vw;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .item-menu-btn {

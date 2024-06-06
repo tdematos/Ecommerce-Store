@@ -1,5 +1,6 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import "../style/nav-selector.css";
+import { Link } from "react-router-dom";
 
 interface navSelectorProps {
   navTitle: string;
@@ -14,6 +15,17 @@ const NavSelector: React.FC<navSelectorProps> = ({
   isDialogOpen,
   onMouseLeave,
 }) => {
+  const [products, setProducts] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products?limit=4")
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data); // Set the array of products
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
   return (
     <Fragment>
       <dialog
@@ -25,16 +37,21 @@ const NavSelector: React.FC<navSelectorProps> = ({
           <h3 className="modal-title">{navTitle}</h3>
           <ul className="modal-link-list">
             <li>
-              <a href="">Clubs</a>
-            </li>
-            <li>
-              <a href="">Appearel</a>
+              <Link to="shop/collection">Appearel</Link>
             </li>
           </ul>
         </div>
         <div className="modal-photo">
-          <div className="photo-box"></div>
-          <p className="photo-caption">{caption}</p>
+          <div className="photo-box">
+            <img
+              className="hov-img"
+              src={products[1] && products[1].image}
+              alt=""
+            />
+          </div>
+          <p className="photo-caption">
+            <Link to="shop/collection">{caption}</Link>
+          </p>
         </div>
       </dialog>
     </Fragment>

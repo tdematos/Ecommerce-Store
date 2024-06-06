@@ -50,7 +50,7 @@
 
 .photo-box {
   width: 170px;
-  height: 170px;
+  height: 190px;
   background-color: green;
 }
 
@@ -59,4 +59,18 @@
   font-size: 14px;
   font-weight: 700;
   margin-top: 15px;
+}
+
+.hov-img {
+  width: 100%;
+  height: 100%;
+}
+
+.photo-caption > a {
+  text-decoration: none;
+  color: var(--darkBlue-color);
+}
+
+.photo-caption > a:hover {
+  color: var(--orange-color);
 }
