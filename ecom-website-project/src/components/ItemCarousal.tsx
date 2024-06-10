@@ -12,15 +12,31 @@ const truncateText = (text: string, maxLength: number) => {
 
 const ItemCarousal: React.FC = () => {
   const [products, setProducts] = useState<any[]>([]);
+  const [selectedBall, setSelectedBall] = useState<number>(0);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products?limit=6")
       .then((res) => res.json())
       .then((data) => {
-        setProducts(data); // Set the array of products
+        setProducts(data);
       })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
+
+  const handleBallClick = (index: number) => {
+    setSelectedBall(index);
+  };
+
+  const getCarouselTransform = () => {
+    switch (selectedBall) {
+      case 1:
+        return "translateX(-22vw)";
+      case 2:
+        return "translateX(-42vw)";
+      default:
+        return "translateX(0)";
+    }
+  };
 
   return (
     <Fragment>
@@ -32,31 +48,42 @@ const ItemCarousal: React.FC = () => {
               <Link to="shop/collection">View All</Link>
             </button>
           </div>
-          <div className="left-select">
-            <p>&lt;</p>
-          </div>
           <div className="item-box">
-            <div className="item-inner-box">
+            <div
+              className="item-inner-box"
+              style={{ transform: getCarouselTransform() }}
+            >
               {products.map((product) => (
                 <ItemCard
                   key={product.id}
                   itemImage={product.image}
                   altText={product.title}
-                  itemTitle={truncateText(product.title, 20)}
+                  itemTitle={product.title}
                   itemDesc={truncateText(product.description, 50)}
                   itemPrice={product.price}
                 />
               ))}
             </div>
-
-            <div className="right-select">
-              <p>&gt;</p>
-            </div>
           </div>
           <div className="round-selectors">
-            <div className="round-selector left"></div>
-            <div className="round-selector middle"></div>
-            <div className="round-selector right"></div>
+            <div
+              onClick={() => handleBallClick(0)}
+              className={`round-selector ${
+                selectedBall === 0 ? "selected" : ""
+              }`}
+            ></div>
+            <div
+              onClick={() => handleBallClick(1)}
+              className={`round-selector ${
+                selectedBall === 1 ? "selected" : ""
+              }`}
+            ></div>
+            <div
+              onClick={() => handleBallClick(2)}
+              className={`round-selector ${
+                selectedBall === 2 ? "selected" : ""
+              }`}
+            ></div>
           </div>
         </div>
       </section>
