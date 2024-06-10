@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import "../style/twoItems.css";
+import { Link } from "react-router-dom";
 
 const TwoItems: React.FC = () => {
   const [products, setProducts] = useState<any[]>([]);
@@ -21,12 +22,20 @@ const TwoItems: React.FC = () => {
             <img
               className="twoprod-img"
               src={products[4] && products[4].image}
-              alt=""
+              alt="A brown jacket"
             />
           </div>
           <div className="item-text">
             <p className="item-headline">PST... THE BEST DEAL IS RIGHT HERE</p>
-            <button className="item-cta2">GET ITEM NOW</button>
+            <button className="item-cta2">
+              <Link
+                to={`/shop/products/${encodeURIComponent(
+                  (products[4] && products[4].title) || ""
+                )}`}
+              >
+                GET ITEM NOW
+              </Link>
+            </button>
           </div>
         </div>
         <div className="item-two">
@@ -34,11 +43,19 @@ const TwoItems: React.FC = () => {
             <img
               className="twoprod-img"
               src={products[5] && products[5].image}
-              alt=""
+              alt="Blue long sleeeve shirt"
             />
           </div>
           <div className="item-text">
-            <button className="item-cta2">GET ITEM NOW</button>
+            <button className="item-cta2">
+              <Link
+                to={`/shop/products/${encodeURIComponent(
+                  (products[5] && products[5].title) || ""
+                )}`}
+              >
+                GET ITEM NOW
+              </Link>
+            </button>
             <p className="item-headline-two">
               FOR A LIMITED TIME GET 50% OFF YOUR PURCHASE WHEN YOU SPEND OVER
               $30...
