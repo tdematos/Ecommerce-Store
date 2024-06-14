@@ -50,6 +50,10 @@
   background-color: var(--sand-color);
 }
 
+.round-select.active {
+  background-color: var(--darkBlue-color);
+}
+
 .round-select:hover {
   background-color: var(--darkBlue-color);
   cursor: pointer;
