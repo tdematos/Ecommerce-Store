@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import CompareColumn from "./CompairColumn";
 import "../style/itemCompare.css";
+import { Link } from "react-router-dom";
 
 const ItemCompare: React.FC = () => {
   const [products, setProducts] = useState<any[]>([]);
@@ -35,7 +36,15 @@ const ItemCompare: React.FC = () => {
                   )}
                 </div>
                 {products[2] && <h4>{products[2].title}</h4>}
-                <button className="item-cta">SHOP ITEM</button>
+                <button className="item-cta">
+                  <Link
+                    to={`/shop/products/${encodeURIComponent(
+                      (products[2] && products[2].title) || ""
+                    )}`}
+                  >
+                    GET ITEM NOW
+                  </Link>
+                </button>
               </div>
 
               <div className="item-container">
@@ -49,7 +58,15 @@ const ItemCompare: React.FC = () => {
                   )}
                 </div>
                 {products[3] && <h4>{products[3].title}</h4>}
-                <button className="item-cta">SHOP ITEM</button>
+                <button className="item-cta">
+                  <Link
+                    to={`/shop/products/${encodeURIComponent(
+                      (products[3] && products[3].title) || ""
+                    )}`}
+                  >
+                    SHOP ITEM
+                  </Link>
+                </button>
               </div>
             </div>
           </div>
