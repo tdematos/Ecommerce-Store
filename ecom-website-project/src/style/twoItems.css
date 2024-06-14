@@ -82,3 +82,8 @@
   width: 100%;
   border-radius: 50%;
 }
+
+.item-cta2 > a {
+  text-decoration: none;
+  color: var(--darkBlue-color);
+}
