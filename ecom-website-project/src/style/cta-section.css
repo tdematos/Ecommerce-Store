@@ -64,13 +64,17 @@
 
 .cta-btn {
   background-color: var(--darkBlue-color);
-  color: var(--sand-color);
   font-weight: 500;
   font-size: 20px;
   width: 200px;
   height: 60px;
   border: none;
   transition: background-color 0.75s;
+}
+
+.cta-btn > a {
+  text-decoration: none;
+  color: var(--sand-color);
 }
 
 .cta-btn:hover {

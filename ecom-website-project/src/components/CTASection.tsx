@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import "../style/cta-section.css";
+import { Link } from "react-router-dom";
 
 const CTASection: React.FC = () => {
   const [products, setProducts] = useState<any[]>([]);
@@ -31,7 +32,9 @@ const CTASection: React.FC = () => {
             <div className="cta-box">
               <h3 className="cta-title">EVERY ITEM IS HAND CRAFTED</h3>
               <p className="cta-subtitle">Find the perfect item in our store</p>
-              <button className="cta-btn">Shop Site Wide</button>
+              <button className="cta-btn">
+                <Link to="shop/collection">Shop Site Wide</Link>
+              </button>
             </div>
           </div>
         </div>
