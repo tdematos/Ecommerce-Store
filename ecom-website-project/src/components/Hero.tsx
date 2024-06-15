@@ -17,7 +17,7 @@ const HeroSection: React.FC<HeroProps> = (props) => {
     fetch("https://fakestoreapi.com/products?limit=4")
       .then((res) => res.json())
       .then((data) => {
-        setProducts(data); // Set the array of products
+        setProducts(data);
       })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
