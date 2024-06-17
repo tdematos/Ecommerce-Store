@@ -224,6 +224,11 @@
   cursor: pointer;
 }
 
+.cta-square-image {
+  height: 100%;
+  width: 100%;
+}
+
 /*product benefit styling goes below*/
 .pbContainer {
   height: 450px;
@@ -270,6 +275,14 @@
   border-radius: 25px;
   background-color: red;
   margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pbIcon {
+  font-size: 55px;
 }
 
 .pbBoxtitle {

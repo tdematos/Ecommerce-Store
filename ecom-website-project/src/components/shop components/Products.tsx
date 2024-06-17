@@ -54,14 +54,6 @@ const Products: React.FC = () => {
       />
       <div className={styles["item-Disp-container"]}>
         <div className={styles["photo-carousal"]}>
-          <div className={styles["item-select"]}>
-            <div className={styles["sm-photo"]}>
-              <a href=""></a>
-            </div>
-            <div className={styles["sm-photo"]}>
-              <a href=""></a>
-            </div>
-          </div>
           <div className={styles["main-item-display"]}>
             <div className={styles["main-item"]}>
               <img src={product.image} alt={product.title} />
@@ -77,12 +69,7 @@ const Products: React.FC = () => {
 
           <div className={styles["item-descriptioin-container"]}>
             <p className={styles["item-description"]}>{product.description}</p>
-            <ul id={styles["item-list-info"]}>
-              <li>Made out of unique titanium</li>
-              <li>Lighter than a feather</li>
-              <li>Comes in one color</li>
-              <li>handle is unbreakable</li>
-            </ul>
+            <p className={styles["item-description"]}>{product.category}</p>
           </div>
 
           <div className={styles["quantity-container"]}>
@@ -105,7 +92,7 @@ const Products: React.FC = () => {
       <ProductInfoBox
         title="Item Info"
         icon={toggleMenu ? "-" : "+"}
-        description={toggleMenu ? "Test Test Test" : null}
+        description={toggleMenu ? product.description : null}
         onClick={handleIconClick}
       />
       <ProductBenefit />
